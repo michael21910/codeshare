@@ -30,7 +30,6 @@ solved_cpeOneStar.sort(function compareNumbers(a, b) {
     return a - b;
 })
 
-
 solved_leetcode.sort(function compareNumbers(a, b) {
     return a - b;
 })
@@ -2708,7 +2707,7 @@ function goTop() {
 
 // runs every time when the first select tag changes
 function updateTable(table) {
-    if (table.value === 'uva') {
+    if (table.value === 'cpeOne') {
         // remove the child(options) first
         while (document.getElementById('problemSet').firstChild) {
             document.getElementById('problemSet').removeChild(document.getElementById('problemSet').firstChild)
@@ -2738,13 +2737,13 @@ function updateTable(table) {
 
 function updateCode(target){
     // display the background color
-    document.getElementById('codeContainer').style.backgroundColor = '#ffc4b6'
+    document.getElementById('codeContainer').style.backgroundColor = '#f2f0dd'
     //if the user choose uva problems
     if(target.options[target.selectedIndex].value[0] === 'u'){
         for(let i = 0; i < solved_cpeOneStar.length; i++){
             if('u' + solved_cpeOneStar[i] === target.options[target.selectedIndex].value){
                 document.getElementById('codeSpace').innerHTML = UVa_ac[i]
-                document.getElementById('problemTitle').innerHTML = 'UVa' + solved_cpeOneStar[i]
+                document.getElementById('problemTitle').innerHTML = 'CPE 1 star - UVa' + solved_cpeOneStar[i]
             }
         }
     }
